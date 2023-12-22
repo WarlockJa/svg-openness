@@ -1,0 +1,66 @@
+svg {
+  animation: fillPath 500ms ease forwards 4s;
+  fill-opacity: 0;
+}
+
+path {
+  stroke: var(--clr-main);
+}
+
+path:nth-child(1) {
+  stroke-dasharray: 305;
+  stroke-dashoffset: 305;
+  animation: strokeAnimation 2s ease forwards;
+}
+path:nth-child(2) {
+  stroke-dasharray: 295;
+  stroke-dashoffset: 295;
+  animation: strokeAnimation 2s ease forwards 300ms;
+}
+path:nth-child(3) {
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+  animation: strokeAnimation 2s ease forwards 600ms;
+}
+path:nth-child(4) {
+  stroke-dasharray: 540;
+  stroke-dashoffset: 540;
+  animation: strokeAnimation 2s ease forwards 900ms;
+}
+path:nth-child(5) {
+  stroke-dasharray: 540;
+  stroke-dashoffset: 540;
+  animation: strokeAnimation 2s ease forwards 1200ms;
+}
+path:nth-child(6) {
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+  animation: strokeAnimation 2s ease forwards 1500ms;
+}
+path:nth-child(7) {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  animation: strokeAnimation 2s ease forwards 1800ms;
+}
+path:nth-child(8) {
+  stroke-dasharray: 460;
+  stroke-dashoffset: 460;
+  animation: strokeAnimation 2s ease forwards 2100ms;
+}
+
+@keyframes strokeAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillPath {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: var(--clr-fill);
+    fill-opacity: 1;
+    /* fill: url(#testGradient); */
+  }
+}
